@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="converter">
+      <h1>Currency Converter</h1>
+      <div id="names_flag">
+        <img id="flagFrom" src="https://flagsapi.com/BD/flat/64.png" />
+        <select id="fromCurrency"></select>
+      </div>
+      <div id="names_flag">
+        <img id="flagTo" src="https://flagsapi.com/BD/flat/64.png" />
+        <select id="toCurrency"></select>
+      </div>
+
+      <input type="number" id="amount" placeholder="Enter amount" />
+
+      <button id="button">Convert</button>
+      <p id="result">Converted amount will appear here</p>
+    </div>
+    <script type="module" src="codes.js"></script>
+
+    <script type="module">
+      import { convertCurrency } from './app.js';
+      document
+        .getElementById('button')
+        .addEventListener('click', convertCurrency);
+    </script>
+  </body>
+</html>
